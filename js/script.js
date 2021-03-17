@@ -193,9 +193,9 @@ window.addEventListener('DOMContentLoaded', () => {
 
 	//  slider
 		const slider = () => {
-				const slide = document.querySelectorAll('.portfolio-item'),
+				const slide = document.querySelectorAll('.portfolio-item'),//слайды
 						  // dot = document.querySelectorAll('.dot'),
-						createsDotes = document.querySelector('.portfolio-dots'),
+						createsDotes = document.querySelector('.portfolio-dots'),// для точек
 							slider = document.querySelector('.portfolio-content');
 
 				let currentSlide = 0,
@@ -229,7 +229,9 @@ window.addEventListener('DOMContentLoaded', () => {
 						elem[index].classList.add(strClass);
 
 				};
-
+				/**
+         * Запуск слайдера в автоплей
+         */
 				const autoPlaySlide = () => {
 					
 						prevSlide (slide, currentSlide, 'portfolio-item-active');
@@ -253,8 +255,11 @@ window.addEventListener('DOMContentLoaded', () => {
 						clearInterval(interval);
 				};
 				
-				
+				 
 
+				 /**
+         * клики через делегирование
+         */
 				slider.addEventListener ('click', (event) => {
 						event.preventDefault();
 
