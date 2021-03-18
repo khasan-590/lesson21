@@ -1,5 +1,3 @@
-
-
 window.addEventListener('DOMContentLoaded', () => {
 
 		'use strict';
@@ -191,12 +189,13 @@ window.addEventListener('DOMContentLoaded', () => {
 		tabs();
 
 
-	//  slider
+	 //slider
 		const slider = () => {
-				const slide = document.querySelectorAll('.portfolio-item'),//слайды
+				const slider = document.querySelector('.portfolio-content'),
+				 slide = document.querySelectorAll('.portfolio-item'),//слайды
 						  // dot = document.querySelectorAll('.dot'),
-						createsDotes = document.querySelector('.portfolio-dots'),// для точек
-							slider = document.querySelector('.portfolio-content');
+						createsDotes = document.querySelector('.portfolio-dots');// для точек
+							
 
 				let currentSlide = 0,
 							interval;
@@ -206,7 +205,7 @@ window.addEventListener('DOMContentLoaded', () => {
 						const butnDots = number => {
 							
 								const createDots = [];
-								for (let i = 0; i < number; i++) {
+								for (let i = 0; i <= number; i++) {
 								const dot = document.createElement('li');
 								
 										dot.classList.add('dot');
@@ -218,7 +217,7 @@ window.addEventListener('DOMContentLoaded', () => {
 							 
 						};
 		
-						let lidots = butnDots(slide.length - 1);
+						
 
 				const prevSlide = (elem, index, strClass ) => {
 						elem[index].classList.remove(strClass);
@@ -229,6 +228,8 @@ window.addEventListener('DOMContentLoaded', () => {
 						elem[index].classList.add(strClass);
 
 				};
+
+				let lidots = butnDots(slide.length - 1);
 				/**
          * Запуск слайдера в автоплей
          */
@@ -317,7 +318,6 @@ window.addEventListener('DOMContentLoaded', () => {
 		
 		slider();
 
-		
 
 });
 
