@@ -193,24 +193,25 @@ window.addEventListener('DOMContentLoaded', () => {
 		const slider = () => {
 				const slider = document.querySelector('.portfolio-content'),
 				 slide = document.querySelectorAll('.portfolio-item'),//слайды
-						  // dot = document.querySelectorAll('.dot'),
+						  dot = document.querySelectorAll('.dot'),
 						createsDotes = document.querySelector('.portfolio-dots');// для точек
 							
 
 				let currentSlide = 0,
 							interval;
 							
-
-			// createsDotes.remove('.dot');
+			
+			
 						const butnDots = number => {
 							
 								const createDots = [];
 								for (let i = 0; i <= number; i++) {
-								const dot = document.createElement('li');
+								const dots = document.createElement('li');
 								
-										dot.classList.add('dot');
-										createsDotes.append(dot);
-										createDots.push(dot);
+										dots.classList.add('dot');
+
+										createsDotes.append(dots);
+										createDots.push(dots);
 								}
 								createDots[0].classList.add('dot-active');
 								return createDots;
